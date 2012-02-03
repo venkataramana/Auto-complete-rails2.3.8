@@ -1,0 +1,9 @@
+
+<table>
+        <tr>
+                <td>
+                        <%= @customers.name %>
+                </td>
+        </tr>
+</table>
+

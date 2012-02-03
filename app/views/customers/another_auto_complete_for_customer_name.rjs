@@ -1,0 +1,55 @@
+page.replace_html :your_page_element_id, :text => "if you want to add any text in that page element"
+page.replace_html :your_page_element_id, :partial => "name_of_partial that you want to replace(if you want to add any partial in that page element)"
+
+page.replace :your_page_element_id, :text => "if you want to replace whole div with text. Above 2 line will replace innner html of that particular page element only"
+page.replace :your_page_element_id, :partial => "if you want to replace whole div with partial. Above 2 line will replace innner html of that particular page element only"
+
+page.insert_html :before,:your_page_element_id, :partial => "if you want to insert partial before particular page element"
+page.insert_html :after,:your_page_element_id, :partial => "if you want to insert partial after particular page element"
+page.insert_html :before,:your_page_element_id, :text => "if you want to insert text before particular page element"
+page.insert_html :after,:your_page_element_id, :text => "if you want to insert text after particular page element"
+
+page.insert_html :first,:your_page_element_id, :partial => "if you want to insert partial at starting of any particular page element"
+page.insert_html :last,:your_page_element_id, :partial => "if you want to insert partial at last of any particular page element"
+page.insert_html :first,:your_page_element_id, :text => "if you want to insert text at starting of any particular page element"
+page.insert_html :last,:your_page_element_id, :text => "if you want to insert text at last of any particular page element"
+
+
+
+
+<html>
+<head>
+</head>
+<body>
+
+        <div id="content">
+                <div id="header">
+                        Some header content
+                </div>
+
+                <div id="mid">
+                        lorem   ispulm
+                </div>
+
+                <div id="footer">
+                </div>
+        </div>
+
+
+        <div id="content">
+                <div id='dummy_header'>asdfasdfasfd</div>
+
+                <div id="mid">
+                       Some other content
+                </div>
+
+                <div id="footer">
+                </div>
+        </div>
+
+page.replace "header", "<div id='dummy_header'>asdfasdfasfd</div>"
+page.replace_html "mid", :text => "Some other content"
+
+</body>
+</html>
+
